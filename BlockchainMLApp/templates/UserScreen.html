@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+<head>
+<title>Blockchain ML Health Care</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Blockchain and Machine Learning in Health Care and Management</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+	<ul><center>
+	<li><a href="{% url 'AddPatientCondition' %}">Add Patient Condition</a></li>
+	  <li><a href="{% url 'Predict' %}">Check Patient Records from Blockchain</a></li>
+      <li><a href="{% url 'index' %}">Logout</a></li>
+			
+		</center></ul>
+		<br class="clearfix" />
+	</div>
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>
+	<br/><br/>
+			<center><font size="3" color="red">{{ data|safe }}</font></center>
+			<br/><br/>
+	<p align="justify"><font size="3" style="font-family: Comic Sans MS" color='black'>
+		Abstract-Today we have enormous amount of data available in
+every sector, with the advent of technology available, it is possible
+to provide solutions to many problems. In this paper we are going
+to provide solutions to the problems related to healthcare data
+management using Machine Learning and Blockchain. Extracting
+only the relevant information from the data is possible with the
+use of Machine Learning. This is done using trained algorithms.
+Once this data is stored, the next problem is Data sharing and its
+reliability.</p><p align="justify"><font size="3" style="font-family: Comic Sans MS" color='black'>This is where Blockchain comes into picture. The
+consensus in Blockchain technology makes sure that data is
+legitimate and transactions are secure. Blockchain technology can
+potentially change health care management for the better by
+placing patient at the epicentre of the healthcare system and
+increasing the privacy and interoperability of health data. </p><p align="justify"><font size="3" style="font-family: Comic Sans MS" color='black'> This
+paper focuses primarily on solving healthcare data
+management problems by using Blockchain technology and
+including some indispensable features using Machine Learning.
+</p>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

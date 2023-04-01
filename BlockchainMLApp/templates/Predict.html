@@ -1,0 +1,66 @@
+{% load static %}
+<html>
+<head>
+<title>Blockchain ML Health Care</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+ <script LANGUAGE="Javascript" >
+function validate(){
+	var x=document.forms["f1"]["t1"].value;
+	
+	if(x == null || x==""){
+		window.alert("Patient ID must be enter");
+		document.f1.t1.focus();
+		return false;
+	}
+	
+	return true;
+}
+		
+	
+	</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Blockchain and Machine Learning in Health Care and Management</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+	<li><a href="{% url 'AddPatientCondition' %}">Add Patient Condition</a></li>
+	  <li><a href="{% url 'Predict' %}">Check Patient Records from Blockchain</a></li>
+      <li><a href="{% url 'index' %}">Logout</a></li>
+			
+		</center></ul>
+<br class="clearfix" />
+				</div>
+			
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>	
+			<center>
+<form name="f1" method="post" action={% url 'PredictAction' %} OnSubmit="return validate()">
+	{% csrf_token %}<br/>
+   <h3><b>Get Patient Records from Blockchain Screen</b></h3>
+   
+	<font size="" color="black"><center>{{ data }}</center></font>
+						
+						<table align="center" width="80" >
+			 <tr><td><font size="3" color="black">Patient&nbsp;ID</b></td><td><input type="text" name="t1" style="font-family: Comic Sans MS" size="30"/></td></tr>
+         		
+		 
+			<tr><td></td><td><input type="submit" value="Get Records">
+			</td>
+			</table>
+				</div>	
+					
+				</div>
+				<br/><br/><br/><br/><br/><br/>
+				
+	</body>
+</html>

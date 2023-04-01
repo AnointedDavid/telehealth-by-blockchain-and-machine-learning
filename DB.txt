@@ -1,0 +1,15 @@
+create database BlockchainML;
+use BlockchainML;
+
+create table register(username varchar(30) primary key,
+password varchar(30),
+contact varchar(12),
+email varchar(30),
+address varchar(40),
+usertype varchar(40),
+hospital_name varchar(50));
+
+
+
+
+

@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+<head>
+<title>Blockchain ML Health Care</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Blockchain and Machine Learning in Health Care and Management</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+	<li><a href="{% url 'AddPatientCondition' %}">Add Patient Condition</a></li>
+	  <li><a href="{% url 'Predict' %}">Check Patient Records from Blockchain</a></li>
+      <li><a href="{% url 'index' %}">Logout</a></li>
+			
+		</center></ul>
+		<br class="clearfix" />
+	</div>
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>
+	<br/><br/>
+			<center>
+			
+			<table align="center" border="1">
+			<tr><th><font size="3" color="black">Patient ID</th>
+			<th><font size="3" color="black">Doctor Name</th>
+			<th><font size="3" color="black">Hospital Name</th>
+			<th><font size="3" color="black">Date</th>
+			<th><font size="3" color="black">Age</th>
+			<th><font size="3" color="black">Gender</th>
+			<th><font size="3" color="black">CP</th>
+			<th><font size="3" color="black">Trest BPS</th>
+			<th><font size="3" color="black">Cholestral</th>
+			<th><font size="3" color="black">FBS</th>
+			<th><font size="3" color="black">Rest ECG</th>
+			<th><font size="3" color="black">Thalach</th>
+			<th><font size="3" color="black">Exang</th>
+			<th><font size="3" color="black">Old Peak</th>
+			<th><font size="3" color="black">Slope</th>
+			<th><font size="3" color="black">CA</th>
+			<th><font size="3" color="black">Thal</th>
+			<th><font size="3" color="black">Machine Learning Prediction</th>
+			</center>
+			{{ data|safe }}
+			</table>
+			<br/><br/><br/><br/><br/><br/>
+			</body>
+			</html>
